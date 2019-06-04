@@ -6,53 +6,30 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 10:31:11 by jhouston          #+#    #+#             */
-/*   Updated: 2019/05/28 09:55:49 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/04 17:11:01 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
 
-void *ft_memmove(void *d, const void *s, size_t n)
+#include "libft.h"
+
+void *ft_memmove(void *dest, const void *src, size_t len)
 {
-	char *src = (char *)s;
-	char *dest = (char *)d;
-	char temp[n];
+	unsigned char *s;
+	unsigned char *d;
 	size_t i;
-
-	i = 0;
-	while (i < n)
+	
+	i = len;
+	s = (unsigned char *)src;
+	d = (unsigned char *)dest;
+	if (dest > src)
 	{
-		temp[i] = src[i];
-		i++;
+		while (i > 0)
+		{
+			i--;
+			d[i] = s[i];
+		}
 	}
-	i = 0;
-	while (i < n)
-	{
-		dest[i] = temp[i];
-		i++;
-	}
+	else
+		dest = ft_memcpy(dest, src, len);
 	return (dest);
-}
-
-int	main(void)
-{
-	const char src[50] = "Hey There!";
-	char dest[50];
-
-	strcpy(dest, "Heloooo!!");
-	printf("Before memmove dest = %s, src = %s\n", dest, src);
-	memmove(dest, src, strlen(src) + 1);
-	printf("After memmove dest = %s, src = %s\n", dest, src);
-
-/*-------------ft------------*/
-
-	const char s[50] = "Hey There!";
-	char d[50];
-
-	strcpy(d, "Heloooo!!");
-	printf("Before ft_memmove dest = %s, src = %s\n", d, s);
-	ft_memmove(d, s, strlen(src) + 1);
-	printf("After ft_memmove dest = %s, src = %s\n", d, s);
-
-	return (0);
 }

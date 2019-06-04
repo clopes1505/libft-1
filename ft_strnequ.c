@@ -6,7 +6,7 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 15:26:35 by jhouston          #+#    #+#             */
-/*   Updated: 2019/05/29 17:05:24 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/04 16:16:13 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,4 @@ int	ft_strnequ(const char *s1, const char *s2, size_t n)
 		return (1);
 	else
 		return (0);	
-}
-int	main(void)
-{
-	const char *str = "Policeman";
-	const char *str2 = "Policean";
-	int i;
-
-	i = ft_strnequ(str, str2, 12);
-	printf("%i", i);
 }

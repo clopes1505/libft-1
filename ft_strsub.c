@@ -6,11 +6,10 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 06:39:24 by jhouston          #+#    #+#             */
-/*   Updated: 2019/05/30 07:14:05 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/04 16:22:02 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 char *ft_strsub(char const *s, unsigned int start, size_t len)
@@ -35,15 +34,4 @@ char *ft_strsub(char const *s, unsigned int start, size_t len)
 		j++;
 	}
 	return (str);
-}
-
-int	main(void)
-{
-	char *res;
-	char const *str = "Hello, World";
-	unsigned int start = 3;
-	size_t len = 8;
-
-	res = ft_strsub(str, start, len);
-	printf("%s", res);
 }

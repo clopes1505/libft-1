@@ -6,7 +6,7 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 07:48:45 by jhouston          #+#    #+#             */
-/*   Updated: 2019/05/30 08:34:44 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/04 16:22:17 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,4 @@ char	*ft_strtrim(char const *s)
 		j++;
 	}
 	return(str);
-}
-
-int	main(void)
-{
-	char const *str = "			 Hi			";
-	char *res;
-
-	res = ft_strtrim(str);
-	printf("%s", res);
 }

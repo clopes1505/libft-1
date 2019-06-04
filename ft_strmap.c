@@ -6,28 +6,29 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 09:59:02 by jhouston          #+#    #+#             */
-/*   Updated: 2019/05/30 08:43:56 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/04 16:07:53 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
+
 #include "libft.h"
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	const char *str;
+	char *str;
 	int			i;
 	int			j;
 
 	i = 0;
 	j = ft_strlen(s);
-	str = (const char*) malloc(j);
+	str = (char*) malloc(j * sizeof(char *));
 	if (s == NULL || f == NULL)
-		return ;
-	while (s != NULL && s)
+		return (NULL);
+	while (s != NULL && s[i] != '\0')
 	{
-		f(s[i]) = f(str[i]);
+		str[i] = s[i];
+		str[i] = f(s[i]);
 		i++;
 	}
-	return (f(str));
+	return (str);
 }
-*/
+

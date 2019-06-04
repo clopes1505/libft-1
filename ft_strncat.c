@@ -6,23 +6,11 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:14:28 by jhouston          #+#    #+#             */
-/*   Updated: 2019/05/27 08:48:44 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/04 16:15:27 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
 
-int	ft_strlen(const char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strncat(char *dest, const char *src, size_t n)
 {
@@ -40,26 +28,4 @@ char	*ft_strncat(char *dest, const char *src, size_t n)
 	}
 	dest[i] = '\0';
 	return (dest);
-}
-
-int	main(void)
-{
-   char src[50], dest[50];
-
-   strcpy(src,  "Source Destination");
-   strcpy(dest, "This is destination");
-
-   strncat(dest, src, 15);
-
-   printf("Final destination string : |%s|\n\n", dest);
-   /*-------------------------ft----------------------------*/
-	char s[50];
-	char  d[50];
-
-	strcpy(s,  "Source Destination");
-	strcpy(d, "This is destination");
-
-	strncat(d, s, 15);
-
-   printf("Final destination string : |%s|\n", d);
 }

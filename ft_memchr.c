@@ -6,11 +6,11 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 11:04:17 by jhouston          #+#    #+#             */
-/*   Updated: 2019/05/24 07:33:27 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/04 16:11:08 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
+
+#include "libft.h"
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {
@@ -30,25 +30,4 @@ void	*ft_memchr(const void *str, int c, size_t n)
 		i++;
 	}
 	return (NULL);
-}
-
-int	main(void)
-{
-	const char str[] = "Blue";
-	const char ch = '\0';
-	char *ret;
-
-	ret = memchr(str, ch, strlen(str));
-	printf("String after |%c| is - |%s|\n\n", ch, ret);
-	/*-------------ft-------------*/
-
-	const char s[] = "Blue";
-	const char c = '\0';
-	char *r;
-
-	r = ft_memchr(s, c, strlen(s));
-	printf("String after |%c| is - |%s|\n", c, r);
-
-
-	return (0);
 }

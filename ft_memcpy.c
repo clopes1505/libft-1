@@ -6,46 +6,29 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 09:19:18 by jhouston          #+#    #+#             */
-/*   Updated: 2019/05/28 09:55:52 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/04 16:38:58 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
 
-void	*ft_memcpy(void *d, const void *s, size_t n)
+#include "libft.h"
+
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char *src = (char *)s;
-	char *dest = (char *)d;
+	unsigned char *s;
+	unsigned char *d;
 	size_t i;
 
 	i = 0;
+	s = (unsigned char *)src;
+	d = (unsigned char *)dst;
+	if (n == 0)
+		return (dst);
+	if (d == NULL && s == NULL)
+		return (NULL);
 	while (i < n)
 	{
-		dest[i] = src[i];
+		d[i] = s[i];
 		i++;
 	}
-	return (d);
-}
-
-int	main(void)
-{
-	const char src[50] = "Hey There!";
-	char dest[50];
-	
-	strcpy(dest, "Heloooo!!");
-	printf("Before memcpy dest = %s, src = %s\n", dest, src);
-	memcpy(dest, src, strlen(src) + 1);
-	printf("After memcpy dest = %s, src = %s\n", dest, src);
-
-/*-------------ft------------*/
-	
-	const char s[50] = "Hey There!";
-	char d[50];
-
-	strcpy(d, "Heloooo!!");
-	printf("Before ft_memcpy dest = %s, src = %s\n", d, s);
-	ft_memcpy(d, s, strlen(src) + 1);
-	printf("After ft_memcpy dest = %s, src = %s\n", d, s);
-
-	return (0);
+	return (dst);
 }

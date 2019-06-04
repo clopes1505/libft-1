@@ -6,11 +6,11 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 07:20:45 by jhouston          #+#    #+#             */
-/*   Updated: 2019/05/30 08:50:20 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/04 17:25:19 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
+
+#include "libft.h"
 
 char	*ft_strcpy(char *dest, const char *src)
 {
@@ -27,24 +27,22 @@ char	*ft_strcpy(char *dest, const char *src)
 /*
 int	main(void)
 {
-	char src[40];
-	char dest[100];
+   char src[40];
+   char dest[100];
   
    memset(dest, '\0', sizeof(dest));
-   ft_strcpy(src, "This is tutorialspoint.com");
-   ft_strcpy(dest, src);
+   strcpy(src, "--> nyancat <--\n\r");
+   strcpy(dest, src);
 
-   printf("Final copied string : %s\n\n\n", dest);   
-*------------------------ft-------------------------*
+   printf("Final copied string : %s\n\n", dest);
+*---------------------ft------------------*
    char s[40];
    char d[100];
-  
+
    memset(d, '\0', sizeof(d));
-   strcpy(s, "This is tutorialspoint.com");
-   strcpy(d, s);
+   ft_strcpy(s, "--> nyancat <--\n\r");
+   ft_strcpy(d, s);
 
    printf("Final copied string : %s\n", d);
-   
-   return(0);
 }
 */

@@ -1,26 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strstr.c                                           :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 09:52:08 by jhouston          #+#    #+#             */
-/*   Updated: 2019/05/27 08:44:45 by jhouston         ###   ########.fr       */
+/*   Created: 2019/06/04 16:19:11 by jhouston          #+#    #+#             */
+/*   Updated: 2019/06/04 16:23:55 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
 
-int	ft_strlen(const char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char *ft_strstr(const char *haystack, const char *needle)
 {
@@ -47,21 +37,4 @@ char *ft_strstr(const char *haystack, const char *needle)
 		i++;
 	}
 	return (NULL);
-}
-
-int	main(void)
-{
-	char *str = "c";
-	const char *str2 = "ice";
-	char *str3;
-
-	str3 = strstr(str, str2);
-	printf("%s\n\n", str3);
-
-	char *s = "c";
-	const char *s2 = "ice";
-	char *s3;
-
-	s3 = ft_strstr(s, s2);
-	printf("%s", s3);
 }

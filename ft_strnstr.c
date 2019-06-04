@@ -6,23 +6,12 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 06:23:17 by jhouston          #+#    #+#             */
-/*   Updated: 2019/05/27 14:51:42 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/04 16:16:48 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
-#include "libft.h"
-/*
-int		ft_strlen(const char *str)
-{
-	int i;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-*/
+#include "libft.h"
+
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t i;
@@ -50,23 +39,4 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		i++;
 	}
 	return (NULL);
-}
-
-int	main(void)
-{
-	char *str = "ice";
-	const char *str2 = "";
-	char *str3;
-
-	str3 = strnstr(str, str2, 7);
-	printf("%s\n\n", str3);
-
-/*---------------------ft--------------------*/
-
-	char *s = "ice";
-	const char *s2 = "";
-	char *s3;
-
-	s3 = ft_strnstr(s, s2, 7);
-	printf("%s\n", s3);
 }
