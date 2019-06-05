@@ -6,7 +6,7 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 06:42:06 by jhouston          #+#    #+#             */
-/*   Updated: 2019/05/30 09:51:30 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/05 16:39:21 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_putnbr(int n)
 {
-	if (n == -2147483647)
-		ft_putstr("-2147483647");
+	if (n == -2147483648)
+		ft_putstr("-2147483648");
 	else
 	{
 		if (n < 0)
@@ -32,12 +32,3 @@ void	ft_putnbr(int n)
 			ft_putchar(n += '0');
 	}
 }
-/*
-int	main(void)
-{
-	int number;
-
-	number = -2147483647;
-
-	ft_putnbr(number);
-}*/

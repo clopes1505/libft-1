@@ -6,11 +6,11 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 16:00:20 by jhouston          #+#    #+#             */
-/*   Updated: 2019/05/28 06:15:09 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/05 14:34:04 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_isalnum(char c)
+char	ft_isalnum(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);

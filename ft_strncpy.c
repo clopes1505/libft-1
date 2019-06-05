@@ -6,7 +6,7 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:46:47 by jhouston          #+#    #+#             */
-/*   Updated: 2019/06/04 16:15:51 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/05 08:03:22 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,17 @@
 
 char *ft_strncpy(char *dest, const char *src, size_t n)
 {
-	unsigned int i;
+	size_t i;
 
 	i = 0;
-	while (i < n)
+	while (i < n && src[i] != '\0')
 	{
 		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
 		i++;
 	}
 	return (dest);

@@ -6,7 +6,7 @@
 /*   By: sconstab <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 13:42:01 by sconstab          #+#    #+#             */
-/*   Updated: 2019/06/03 09:11:41 by sconstab         ###   ########.fr       */
+/*   Updated: 2019/06/05 16:29:20 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ char	*ft_itoa(int n)
 	i = 0;
 	j = 1;
 	len = ft_intlen(n);
-	s = malloc(len + 1 * sizeof(s));
+	if (!(s = malloc(len + 2 * sizeof(char))))
+		return (NULL);
 	if (n < 0)
 	{
 		j = -1;
@@ -35,5 +36,6 @@ char	*ft_itoa(int n)
 		s[i++] = j * (n % 10) + '0';
 		n = n / 10;
 	}
+	s[i + 1] = '\0';
 	return (ft_strrev(s));
 }

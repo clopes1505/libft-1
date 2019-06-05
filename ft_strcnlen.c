@@ -1,38 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strcnlen.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sconstab <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 14:14:28 by jhouston          #+#    #+#             */
-/*   Updated: 2019/06/05 08:23:52 by jhouston         ###   ########.fr       */
+/*   Created: 2019/05/31 16:29:49 by sconstab          #+#    #+#             */
+/*   Updated: 2019/06/04 14:50:08 by sconstab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+size_t	ft_strcnlen(char const *s, char c, size_t x)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
+	size_t	n;
 
 	i = 0;
 	j = 0;
-	i = ft_strlen(s1);
-	while (s2[j] != '\0')
+	n = 0;
+	if (s[i] != c)
+		j++;
+	while (s[i] && j <= x)
 	{
-		if (n > 0)
+		if (s[i] == c)
 		{
-			s1[i] = s2[j];
-			i++;
+			while (s[i] == c && s[i])
+				i++;
 			j++;
-			n--;
 		}
 		else
-			break ;
+			while(s[i] != c && s[i])
+				i++;
 	}
-
-	s1[i] = '\0';
-	return (s1);
+	while (s[i++] != c && s[i])
+		n++;
+	return (n);
 }

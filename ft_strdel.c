@@ -6,7 +6,7 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 13:17:32 by jhouston          #+#    #+#             */
-/*   Updated: 2019/05/28 13:26:36 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/05 15:07:36 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_strdel(char **as)
 {
+	if (!as)
+		return ((void)NULL);
 	if (*as != NULL)
 	{
 		free(*as);

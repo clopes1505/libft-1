@@ -6,7 +6,7 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 13:15:11 by jhouston          #+#    #+#             */
-/*   Updated: 2019/06/04 17:17:20 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/05 17:10:56 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,14 @@
 # include <unistd.h>
 # include <stdio.h>
 
+int		ft_atoi(const char *str);
 void	*ft_bzero(void *s, size_t n);
 int		ft_intlen(long n);
-char	ft_isalnum(char c);
-int		ft_isdigit(char c);
-int		ft_isprint(char c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isdigit(int c);
+int		ft_isprint(int c);
+char	*ft_itoa(int n);
 void 	*ft_memalloc(size_t size);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void	*ft_memchr(const void *str, int c, size_t n);
@@ -36,13 +39,16 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putendl(char const *s);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr(int n);
+void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr(const char *str);
 void	ft_putstr_fd(const char *str, int fd);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strchr(const char *str, int c);
 void	ft_strclr(char *s);
 int		ft_strcmp(const char *ls, const char *rs);
+size_t	ft_strcnlen(char const *s, char c, size_t x);
 char	*ft_strcpy(char *dest, const char *src);
+char	*ft_strcreturn(char const *s, char c, size_t x);
 void	ft_strdel(char **as);
 char	*ft_strdup(const char *s);
 int		ft_strequ(const char *ls, const char *rs);
@@ -61,11 +67,12 @@ char	*ft_strnew(size_t size);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strrev(char *s);
-char    *ft_strrchr(const char *str, int c);
+char	**ft_strsplit(char const *s, char c);
 char	*ft_strstr(const char *haystack, const char *needle);
 char 	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s);
-char	ft_tolower(char c);
-char	ft_toupper(char c);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
+size_t	ft_wordcount(char const *s, char c);
 
 #endif

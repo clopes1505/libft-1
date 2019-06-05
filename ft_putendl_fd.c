@@ -6,7 +6,7 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 08:52:44 by jhouston          #+#    #+#             */
-/*   Updated: 2019/06/04 16:12:25 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/05 16:38:51 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
-	char *str;
-	str = (char *) s;
-	unsigned int i;
-
-	i = ft_strlen(str);
-	str[i] = '\n';
-	ft_putstr_fd(str, fd);
+	if (s != NULL)
+	{
+		ft_putstr_fd(s, fd);
+		ft_putchar_fd('\n', fd);
+	}
 }

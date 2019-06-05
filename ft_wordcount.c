@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_wordcount.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sconstab <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/30 07:16:54 by jhouston          #+#    #+#             */
-/*   Updated: 2019/06/05 15:44:38 by jhouston         ###   ########.fr       */
+/*   Created: 2019/06/04 13:44:53 by sconstab          #+#    #+#             */
+/*   Updated: 2019/06/04 14:49:50 by sconstab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+size_t	ft_wordcount(char const *s, char c)
 {
-	char *str;
+	size_t i;
+	size_t j;
 
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
-	if (!(str = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
-			return (NULL);
-	ft_strcat(str, s1);
-	ft_strcat(str, s2);
-	return (str);
+	i = 0;
+	j = 0;
+	if (s[i] != c)
+		j++;
+	while (s[i])
+	{
+		if (s[i] == c)
+		{
+			while (s[i] == c && s[i])
+				i++;
+			if (s[i])
+				j++;
+		}
+		else
+			while (s[i] != c && s[i])
+				i++;
+	}
+	return (j);
 }

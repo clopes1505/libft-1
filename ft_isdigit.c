@@ -6,14 +6,14 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 16:00:06 by jhouston          #+#    #+#             */
-/*   Updated: 2019/05/28 06:16:49 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/05 15:02:38 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char c)
+int	ft_isdigt(int c)
 {
 	if (c >= '0' && c <= '9')
-		return (0);
-	else
 		return (1);
+	else
+		return (0);
 }

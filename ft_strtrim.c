@@ -6,7 +6,7 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 07:48:45 by jhouston          #+#    #+#             */
-/*   Updated: 2019/06/04 16:22:17 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/05 16:26:23 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,20 @@
 
 char	*ft_strtrim(char const *s)
 {
-	char *str;
 	unsigned int i;
 	unsigned int j;
-	unsigned int istore;
-
-	str = (char *)malloc(ft_strlen(s));
-	i = ft_strlen(s);
+	unsigned int l;
+	
 	j = 0;
-	if (s == NULL)
+	if (s ==  NULL)
 		return (NULL);
-	i = i - 1;
-	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-		i--;
-	istore = i;
-	istore = istore + 1;
-	i = 0;
-	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-		i++;
-
-	while (i < istore && s[i] != '\0')
-	{
-		str[j] = s[i];
-		i++;
+	while (s[j] != '\0' && (s[j] == ' ' || s[j] == '\n' || s[j] == '\t'))
 		j++;
-	}
-	return(str);
+	i = ft_strlen(s);
+	while (j < i && (s[i - 1] == ' ' || s[i - 1] == '\n' || s[i - 1] == '\t'))
+		i--;
+	if (j == i)
+		return (ft_strnew(1));
+	l = i - j;
+	return(ft_strsub(s, j, l));
 }
