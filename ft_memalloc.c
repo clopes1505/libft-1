@@ -6,7 +6,7 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 07:10:14 by jhouston          #+#    #+#             */
-/*   Updated: 2019/05/29 14:51:58 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:56:01 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,6 @@ void	*ft_memalloc(size_t size)
 	str = (void*)malloc(size * sizeof(size));
 	if (str == NULL)
 		return (NULL);
-	ft_bzero (str, size);
+	ft_bzero(str, size);
 	return (str);
 }
-/*
-int	main(void)
-{
-//	char *str;
-	size_t n;
-
-	n = 9;
-	 memalloc(9);
-}*/

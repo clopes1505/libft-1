@@ -6,7 +6,7 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 14:43:56 by jhouston          #+#    #+#             */
-/*   Updated: 2019/06/04 16:10:37 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:45:44 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void	*ft_bzero(void *s, size_t n)
 		return (s);
 	str = s;
 	while (n--)
-	{   
+	{
 		*str = '\0';
 		if (n)
 			str++;
 	}
-	return(s);
+	return (s);
 }

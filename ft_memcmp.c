@@ -6,7 +6,7 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 08:17:51 by jhouston          #+#    #+#             */
-/*   Updated: 2019/06/04 16:25:55 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:57:37 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *ls, const void *rs, size_t n)
 {
-	const unsigned char *left;
-	const unsigned char *right;
-	size_t i;
+	const unsigned char	*left;
+	const unsigned char	*right;
+	size_t				i;
 
 	i = 0;
 	left = (const unsigned char *)ls;
@@ -29,5 +29,5 @@ int	ft_memcmp(const void *ls, const void *rs, size_t n)
 			return (left[i] - right[i]);
 		i++;
 	}
-	return (0);	
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 09:59:02 by jhouston          #+#    #+#             */
-/*   Updated: 2019/06/05 15:13:06 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:51:45 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,3 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	str[i] = '\0';
 	return (str);
 }
-

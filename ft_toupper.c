@@ -6,11 +6,11 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 14:45:47 by jhouston          #+#    #+#             */
-/*   Updated: 2019/06/05 15:01:36 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:53:22 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		c = c - 32;

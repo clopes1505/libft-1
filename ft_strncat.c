@@ -6,7 +6,7 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:14:28 by jhouston          #+#    #+#             */
-/*   Updated: 2019/06/05 08:23:52 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:59:04 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 		else
 			break ;
 	}
-
 	s1[i] = '\0';
 	return (s1);
 }

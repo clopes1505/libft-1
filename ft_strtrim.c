@@ -6,7 +6,7 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 07:48:45 by jhouston          #+#    #+#             */
-/*   Updated: 2019/06/05 16:26:23 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:49:53 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ char	*ft_strtrim(char const *s)
 	unsigned int i;
 	unsigned int j;
 	unsigned int l;
-	
+
 	j = 0;
-	if (s ==  NULL)
+	if (s == NULL)
 		return (NULL);
 	while (s[j] != '\0' && (s[j] == ' ' || s[j] == '\n' || s[j] == '\t'))
 		j++;
@@ -29,5 +29,5 @@ char	*ft_strtrim(char const *s)
 	if (j == i)
 		return (ft_strnew(1));
 	l = i - j;
-	return(ft_strsub(s, j, l));
+	return (ft_strsub(s, j, l));
 }
