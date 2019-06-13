@@ -6,7 +6,7 @@
 /*   By: jhouston <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 16:32:53 by jhouston          #+#    #+#             */
-/*   Updated: 2019/06/12 16:58:29 by jhouston         ###   ########.fr       */
+/*   Updated: 2019/06/13 09:26:19 by jhouston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ t_list	*ft_lstnew(void const *content, size_t size)
 		newlst->content = NULL;
 		newlst->content_size = 0;
 	}
-	else 
+	else
 	{
-		newlst = (struct s_list*)malloc(size);
+		newlst->content = (void *)content;
 		newlst->content_size = size;
 	}
 	newlst->next = NULL;
